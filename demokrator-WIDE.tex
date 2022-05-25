@@ -1,0 +1,56 @@
+%MASZYNOPIS ZNORMALIZOWANY
+%article=mwart;book=mwbk;report=mwrep
+\documentclass[a4paper,wide,10pt]{mwbk}
+%deklaracja polskiego---
+\usepackage{polski}
+\usepackage[utf8]{inputenc}
+
+%odst�p pomi�dzy wierszami---
+%\linespread{2}
+%---------
+%TYTU� I AUTOR---
+\author{Piotr Gociek}
+\title{Demokrator}
+%-------------------
+%ROZBUDOWANE INFORMACJE O DOKUMENCIE DLA PDF I DVIPDFM
+%INFO DLA PDF
+%\pdfinfo {
+%/Author (Krzysztof Smirnow)
+%/Subject (opowiadanie SF)
+%/Title (Nie jestem sam)
+%/Creator (TexLive2004 & Gentoo)
+%/Producer (pdflatex)
+%/CreationDate (D:rrrrmmddhhss00)
+%/ModDate (D:rrrrmmddhhss00)
+%/Keywords (Krzysztof Smirnow)
+%}
+%DOCINFO DLA DVIPDFM
+%\special  {pdf: docinfo <<
+%/Author (Krzysztof Smirnow)
+%/Subject (opowiadanie)
+%/Title (Nie jestem sam)
+%/Creator (TexLive2004 & Gentoo)
+%/Producer (pdflatex)
+%/CreationDate (D:rrrrmmddhhss00)
+%/ModDate (D:rrrrmmddhhss00)
+%/Keywords (Krzysztof Smirnow)
+%}
+%-------------------
+%funkcje specjalne----------------
+%\sloppy %zakaz wyd�u�ania lini (gdy nie mo�e z�o�y�)
+\clubpenalty=10000 %nie dzieli wyraz�w pomi�dzy stronami
+\widowpenalty=10000 %nie pozostawia wd�w i sierotpojedynczych
+%linijek na pocz�tku i ko�cu strony
+\brokenpenalty=10000 %nie dzieli wyraz�w pomi�dzy stronami 
+%-------------------------
+
+\begin{document}
+%\maketitle
+%WYMUSZENIE STRONY TYTU�OWEJ I STRONY SPISU TRE�CI
+\maketitle\thispagestyle{empty}\clearpage
+\tableofcontents\clearpage
+
+%TUTAJ PISZ ALBO ZR�B \INCLUDE{} LUB \INPUT{}
+\input{demokrator01.tex} 
+%KONIEC PISANIA
+\end{document}
