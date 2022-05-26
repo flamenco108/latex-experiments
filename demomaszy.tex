@@ -1,59 +1,44 @@
-%MASZYNOPIS ZNORMALIZOWANY
 
-%\documentclass{maszy}
+
+\documentclass{maszynopis}
 %deklaracja polskiego---
 
-%\documentclass[a4paper]{sffms}
-%  \usepackage{babel}
-%  \usepackage[T1]{fontenc}
-%  \usepackage[utf8]{inputenc}
-%  \usepackage{polski}
-
-%\renewcommand*\ttdefault{cmvtt}
-%\renewcommand*\familydefault{\ttdefault} %% Only if the base font of the document is to be typewriter style
-%\usepackage[OT1]{fontenc}  
 
 
-\documentclass[polish,ms,14pt]{memoir}
-%\documentclass[english,ms,11pt]{memoir}
-  \usepackage{babel}
-  \usepackage[T1]{fontenc}
-  \usepackage[utf8]{inputenc}
-  \usepackage{lmodern}
-  \usepackage{polski}
-  \usepackage[autostyle=true]{csquotes}
-  \usepackage[margin=2.5cm]{geometry}
-
-\author{Krzysztof Stenografow}
-\surname{Stenografow}
-\title{Testowy tekst, w którym chodzi o sprawdzenie, jak to będzie wszystko wyglądało ;-)}
-\runningtitle{Testowy tekst}
+%\author{Krzysztof Stenografow}
+%\surname{Stenografow}
+%\title{Testowy tekst, w którym chodzi o sprawdzenie, jak to będzie wszystko wyglądało ;-)}
+%\runningtitle{Testowy tekst}
 
 
 %set page header and footer
-\usepackage{fancyhdr}
-\usepackage{titlesec}
-\pagestyle{fancy}
-\lhead{\surname}
-\chead{\runningtitle}
-\rhead{\today}
+%\usepackage{fancyhdr}
+%\usepackage{titlesec}
+%\pagestyle{fancy}
+%\lhead{\author}
+%\chead{\title}
+%\rhead{\today}
 
 %\usepackage[left=4cm,right=4cm,top=4cm,bottom=4cm]{geometry}
 
-\titlelabel{\thetitle\enspace}
+%\titlelabel{\thetitle\enspace}
 
 
 \begin{document}
 
 %%% tytuł
 \maketitle
-\thispagestyle{fancy}
-
+%\thispagestyle{fancy}
+%\tableofcontents
 
 
 
 
 %TUTAJ PISZ ALBO ZR�B \INCLUDE{} LUB \INPUT{}
-\input{demo.tex} 
+%\input{demo1.tex} 
+\input{demo1.tex} 
+
+%\input{demo.tex} 
 %KONIEC PISANIA
+\theendnotes
 \end{document}

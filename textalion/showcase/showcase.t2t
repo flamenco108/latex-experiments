@@ -1,0 +1,55 @@
+Le TeXtallion
+
+
+
+%!target: xhtml
+%!options: --outfile index.html
+%!encoding: utf-8
+%!style(xhtml): ../includes/sample.css
+
+%!postproc: 'TEXTALLIONURL' 'http://anamnese.online.fr/site2/textallion/docs/presentation.html'
+%!postproc: 'BASEURL' 'http://anamnese.online.fr/site2/textallion'
+
+%!postproc: 'QRCODEURL' <script type="text/javascript" charset="utf-8">s = 120; url = encodeURIComponent(window.location.href);qrcode = "http://chart.apis.google.com/chart?cht=qr&chs="+s+"x"+s+"&chl="+url;document.write('<img src="'+qrcode+'" alt="Qr Code of this page" title="Qr Code of this page" />');</script>
+
+  [../media/logo_textallion.png]
+
+
+- Créations personnelles :
+ - [Le Charron et les Quatre Chevaliers BASEURL/showcase/charron/index_charron.html]
+ - [La bascule de Pierrault BASEURL/showcase/bascule/index_bascule.html]
+
+- Classique : 
+ - [Une Ville flottante, de Jules Verne BASEURL/showcase/une_ville_flottante/index_une_ville_flottante.html]
+ 
+
+- Livre-jeu :
+ - [The Blue Death BASEURL/showcase/the_blue_death/]
+ 
+ 
+- Exemple de session de travail :
+
+[textallion_screenshot.jpg] 
+
+- Copie d'écran de la version HTML d'un texte, sous Linux (l'affichage peut être moins bon en HTML sous Windows)
+
+[charron04.png]
+
+- Copies d'écran sur un lecteur de livres électroniques de marque Bookeen, modèle Cybook Opus :
+
+[charron01.jpg]
+[charron02.jpg]
+[charron03.jpg]
+
+
+[Retourner à l'index de textallion TEXTALLIONURL]
+
+--------------------------------
+
+URL: //[BASEURL/showcase BASEURL/showcase]//
+
+QRCODEURL
+
+================================
+
+//MOTS-CLÉS : LaTeX, python, créer gratuitement des ebooks en epub, comment créer un fichier ePub... / KEYWORDS: Free epub creation tool, create and publish ebooks with free software (freeware)...//
