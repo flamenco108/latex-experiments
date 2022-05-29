@@ -32,8 +32,8 @@
 
 
 \DeclareOption{polish}{\PassOptionsToClass{polish}{memoir}}
-%\DeclareOption{ms}{\PassOptionsToClass{ms}{memoir}}
-%\DeclareOption{12pt}{\PassOptionsToClass{12pt}{memoir}}
+\DeclareOption{ms}{\PassOptionsToClass{ms}{memoir}}
+\DeclareOption{12pt}{\PassOptionsToClass{12pt}{memoir}}
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{memoir}}
 \ProcessOptions\relax
 \ExecuteOptions{12pt,polish,ms}
@@ -53,12 +53,95 @@
 \RequirePackage{fancyhdr}
 \RequirePackage{hyperref}
 
+%%%%%%%%%%%%%%%%%%%%%%%
+%% TYTUŁ AUTOR
+\makeatletter
+\def\@maketitle{%
+
+\begin{center}
+%% tytuł
+{ \normalsize  \MakeTextUppercase{\@title} \par}
+\vskip 1.5em
+% autor
+{ \normalsize  \@author \par}
+\vskip 1.5em
+% data
+{ \normalsize  \@date \par}
+\vskip 1em
+-------
+\vskip 1.5em
+\end{center}
+
+}
+\makeatother
+%% TYTUŁ AUTOR
+%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%
+%% SPIS TREŚCI
+
+\RequirePackage{titlesec}
+\RequirePackage{titletoc}
+%\RequirePackage[nottoc]{tocbibind}
+%\RequirePackage[titles]{tocloft}
+
+\makeatletter
+%\def\@tableofcontents{%
+
+%\renewcommand\cftchapfont{\normalfont}
+%\renewcommand\cftchappagefont{\normalfont}
+
+\renewcommand{\contentsname}{
+\newpage
+\centering \normalsize \# \# \# SPIS TREŚCI \# \# \#
+}% For example
+\renewcommand{\tableofcontents}{%
+  \section*{\contentsname}
+  \@starttoc{toc}
+}
+
+
+\renewcommand{\thepage}{\arabic{page}}
+
+
+
+%% nagłówek spisu treści
+%\renewcommand\contentsname{
+%\centering
+%\normalsize \# \# \# SPIS TREŚCI \# \# \#
+%}
+
+
+
+% kropeczki po nazwie
+%\renewcommand\@dotsep{140}   % default value 4.5
+
+%\titleformat{\chapter}[display]
+%{}{\hfill\rule{.7\textwidth}{3pt}}{0pt}
+%{\hspace*{.3\textwidth}\huge\bfseries}[\addvspace{-1pt}]
+%\titleformat{name=\chapter,numberless}[display]
+%{}{\hfill\rule{.7\textwidth}{3pt}}{0pt}
+%{\hspace*{.3\textwidth}\huge\bfseries}[\addvspace{-1pt}]
+
+
+
+
+\makeatother
+
+
+
+%% SPIS TREŚCI
+%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% PRZYPISY %%%%%%%%%%%%%%%%%%
 %% ZAWSZE NA DOLE czyli endnotes nigdy footnotes!!!
 \RequirePackage{endnotes}
 \let\footnote=\endnote
-%\fi
+
 
 \def\footnotetext{\endnotetext[\number\numexpr\value{endnote}+1]}
 \let\footnotemark\endnotemark
@@ -82,6 +165,16 @@
 %%%%%%%%%%%%%%%%%%%%%%%%
 %% ROZDZIAŁY I PODROZDZIAŁY
 \RequirePackage{titlesec}
+
+%% usunąć nazwy rozdziałów z paginy górnej
+\makeatletter
+\renewcommand\chaptermark[1]{%
+  \markboth{%\MakeUppercase{#1}
+  }{}
+}
+\makeatother
+
+
 
 %%% ROZDZIAŁ
 \titleformat
@@ -180,26 +273,5 @@
 %\renewcommand{\baselineskip}{12pt}
 
 
-%% tytuł, autor itp
-\makeatletter
-\def\@maketitle{%
 
-
-\begin{center}
-%% tytuł
-{ \normalsize  \MakeTextUppercase{\@title} \par}
-\vskip 1.5em
-% autor
-{ \normalsize  \@author \par}
-\vskip 1.5em
-% data
-{ \normalsize  \@date \par}
-\vskip 1em
--------
-\vskip 1.5em
-\end{center}
-
-}
-\makeatother
-%%%%%%
 
